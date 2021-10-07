@@ -16,5 +16,6 @@ typescript: 4.3.5
 
 URL:https://matsukazu0918.github.io/angular-tour-of-heroes/
 
-追加要素
+## 追加要素
+
 Angular Material 導入
