@@ -1,11 +1,13 @@
 <h2>My Heroes</h2>
 
 <div>
-  <label for="new-hero">Hero name: </label>
-  <input id="new-hero" #heroName />
+  <mat-form-field appearance="fill">
+    <mat-label for="new-hero">Hero name: </mat-label>
+    <input matInput id="new-hero" #heroName />
+  </mat-form-field>
 
   <!-- (click) 入力値をadd()に渡したあと、入力をクリアする -->
-  <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+  <button mat-stroked-button color="primary" class="add-button" (click)="add(heroName.value); heroName.value=''">
     Add hero
   </button>
 </div>
@@ -15,7 +17,7 @@
     <a routerLink="/detail/{{hero.id}}">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </a>
-    <button class="delete" title="delete hero"
+    <button mat-stroked-button color="primary" class="delete" title="delete hero"
       (click)="delete(hero)">x</button>
   </li>
 </ul>
